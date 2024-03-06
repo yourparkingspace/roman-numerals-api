@@ -16,7 +16,7 @@ Our client (Numeral McNumberFace) requires a simple RESTful API which will conve
  - An implementation of the supplied interface.
  - The supplied PHPUnit test passing.
  - Clean code, following PSR-12 standards.
- - Use of PHP 7.4 features where appropriate.
+ - Use of PHP 8.3 features where appropriate.
  
 ## Submission Instructions
 Please create a [git bundle](https://git-scm.com/docs/git-bundle/) and send the file across:
