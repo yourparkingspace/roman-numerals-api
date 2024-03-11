@@ -36,12 +36,12 @@ class RomanNumeralTest extends TestCase
         ];
 
         foreach ($toTest as $returnValue => $integer) {
-            $this->assertEquals($returnValue, $this->converter->convertInteger($integer));
+            $this->assertSame($returnValue, $this->converter->convertInteger($integer));
         }
 
         // Test more unique integers
-        $this->assertEquals('MMMCMXCIX', $this->converter->convertInteger(3999));
-        $this->assertEquals('MMXVI', $this->converter->convertInteger(2016));
-        $this->assertEquals('MMXVIII', $this->converter->convertInteger(2018));
+        $this->assertSame('MMMCMXCIX', $this->converter->convertInteger(3999));
+        $this->assertSame('MMXVI', $this->converter->convertInteger(2016));
+        $this->assertSame('MMXVIII', $this->converter->convertInteger(2018));
     }
 }
