@@ -1,25 +1,37 @@
-# Roman Numerals Tech Task
-This development task is based on the simple process of converting Roman numerals. This task requires you to build a JSON API and so any HTML, CSS or JavaScript that is submitted will not be reviewed.
+# Roman Numerals API Tech Test
+This is an example repository of a roman numerals API
 
-## Brief
-Our client (Numeral McNumberFace) requires a simple RESTful API which will convert an integer to its Roman numeral counterpart. After our discussions with the client, we have discovered that the solution will contain three API endpoints, and will only support integers ranging from 1 to 3999. The client wishes to keep track of conversions so they can determine which is the most frequently converted integer, and the last time this was converted.
+## Directory Structure
+The repo is split up into the following diretories:
 
-### Endpoints Required
-1. Accepts an integer, converts it to a Roman numeral, stores it in the database and returns the response.
-2. Lists all the recently converted integers.
-3. Lists the top 10 converted integers.
+- .docs: a directory for any relevant documentation.
 
-## What we are looking for
-- Use of MVC components (View in this instance can be, for example, a Laravel Resource).
-- Use of [Fractal](https://fractal.thephpleague.com/) or [Laravel Resources](https://laravel.com/docs/eloquent-resources)
-- Use of Laravel features such as Eloquent, Requests, Validation and Routes.
-- An implementation of the supplied interface.
-- The supplied PHPUnit test passing.
-- Clean code, following PSR-12 standards.
-- Use of PHP 8.3 features where appropriate.
+-  .docker: this houses all of the docker contextual files for the running of the application(s). This could house future docker specific things for deployments.
 
-## Submission Instructions
-Please create a [git bundle](https://git-scm.com/docs/git-bundle/) and send the file across:
-```
-git bundle create <yourname>.bundle --all --branches
-```
+- .vscode: this directory is optional and wouldn't normally be committed but I like the consistency of some settings that I have found in VS Code, usually a keen PHPStorm user.
+
+- packages: this houses the actual application, included in this test is a `roman-numerals-api` and `roman-numerals-frontend`
+
+## Running The application
+Running the application is simple:
+
+- `cp .env.example .env`
+- Add the following items to the newly made .env
+    - DATABASE_USERNAME=default
+    - DATABASE_PASSWORD=secret  
+- `cd .docker`
+- `docker-compose up -d`
+- You can either now use Docker Desktop to execute commands or find the relevant docker container id to run commands
+    - For Docker Desktop
+        - To install the composer packages, open Docker Desktop, select the PHP container, navigate to exec and run `composer install`
+    - For a CLI approach
+        - Open a terminal
+        - run `docker ps` and find the PHP container or alternatively use `docker ps -aqf "name=docker-php"` on a mac you can also do `pbcopy < docker ps -aqf "name=docker-php`
+        - Using the id of the container run the following command `docker exec {YOUR CONTAINER ID} composer install`
+- Navigate to `http://localhost/` to see the application
+
+## Calling the endpoints
+
+## Running tests
+
+## Future considerations

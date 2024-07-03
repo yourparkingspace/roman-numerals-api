@@ -1,0 +1,1 @@
+This is where a front end application could sit

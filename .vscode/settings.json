@@ -1,0 +1,5 @@
+{
+    "explorer.expandSingleFolderWorkspaces": false,
+    "explorer.compactFolders": false,
+    "workbench.tree.expandMode": "doubleClick"
+}
