@@ -18,6 +18,8 @@ Our client (Numeral McNumberFace) requires a simple RESTful API which will conve
 - Clean code, following PSR-12 standards.
 - Use of PHP 8.3 features where appropriate.
 
+Please also include a short explanation of your approach, including any design decisions you have made and the reasons for those decisions.
+
 ## Submission Instructions
 Please create a [git bundle](https://git-scm.com/docs/git-bundle/) and send the file across:
 ```
