@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: roman-numerals-api
+  annotations:
+    github.com/project-slug: yourparkingspace/roman-numerals-api
+spec:
+  type: service
+  lifecycle: production
+  owner: marketplace-backend
