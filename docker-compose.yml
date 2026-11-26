@@ -1,0 +1,17 @@
+# Provides the MySQL database only. Run PHP however you prefer (>= 8.2 with pdo_mysql).
+services:
+  mysql:
+    image: mysql:8
+    container_name: book-catalogue-mysql
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: book_catalogue
+      MYSQL_USER: catalogue
+      MYSQL_PASSWORD: secret
+    volumes:
+      - book-catalogue-mysql:/var/lib/mysql
+
+volumes:
+  book-catalogue-mysql:
